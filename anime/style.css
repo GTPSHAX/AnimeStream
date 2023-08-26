@@ -174,3 +174,37 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
 }
+.videoplay video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 1000px) {
+    .videoplay video {
+        width: 70%;
+    }
+}
+
+.resolusi {
+    display: flex;
+    margin-left: 10px;
+    flex-direction: column;
+}
+.resolusi button {
+    padding: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: rgba(225, 225, 225, 0.5);
+    border: 1px solid white;
+    backdrop-filter: blur(4px);
+    color: white;
+    border-radius: 3px;
+}
+.resolusi button:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+.resolusi button:active {
+    background-color: antiquewhite;
+    color: #000000;
+}

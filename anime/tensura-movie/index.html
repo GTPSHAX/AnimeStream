@@ -51,8 +51,74 @@
             </div>
         </div>
         <div class="videoplay">
-            <video controls playsinline style="width: 100%; border-radius: 10px; box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.25);"><source src="https://pixeldrain.com/api/file/9EqAu5Zc" type="video/mp4" /></video>
+            <video controls playsinline id="video" style="max-width: 100%; max-height: 100%;"><source src="https://pixeldrain.com/api/file/WkL9r7th" type="video/mp4" /></video>
+            <div class="resolusi">
+                <button id="360">360p</button>
+                <button id="480">480p</button>
+                <button id="720">720p</button>
+                <button id="1080">1080p</button>
+            </div>
         </div>
     </main>
+    <script>
+        const l360 = "WkL9r7th"
+        const l480 = "z67z17GL"
+        const l720 = "9EqAu5Zc"
+        const l1080 = "xX57yNo3"
+
+        const link = "https://pixeldrain.com/api/file/"
+        const normal = "background-color: rgba(225, 225, 225, 0.5); color: white;"
+        const aktif = "background-color: antiquewhite; color: #000000;"
+        const res720 = document.getElementById("720")
+        res720.style = "background-color: antiquewhite; color: #000000;"
+        document.addEventListener("DOMContentLoaded", function() {
+            const video = document.getElementById("video")
+            const res360 = document.getElementById("360")
+            const res480 = document.getElementById("480")
+            const res1080 = document.getElementById("1080")
+
+            function resolusi(res) {
+                video.src = link+res
+                video.load()
+            }
+
+            res360.addEventListener("click", function() {
+                const res = l360
+                resolusi(res)
+                res360.style = aktif
+                res480.style = normal
+                res720.style = normal
+                res1080.style = normal
+                res360,res480,res720,res1080.load()
+            })
+            res480.addEventListener("click", function() {
+                const res = l480
+                resolusi(res)
+                res360.style = normal
+                res480.style = aktif
+                res720.style = normal
+                res1080.style = normal
+                res360,res480,res720,res1080.load()
+            })
+            res720.addEventListener("click", function() {
+                const res = l720
+                resolusi(res)
+                res360.style = normal
+                res480.style = normal
+                res720.style = aktif
+                res1080.style = normal
+                res360,res480,res720,res1080.load()
+            })
+            res1080.addEventListener("click", function() {
+                const res = l1080
+                resolusi(res)
+                res360.style = normal
+                res480.style = normal
+                res720.style = normal
+                res1080.style = aktif
+                res360,res480,res720,res1080.load()
+            })
+        })
+    </script>
 </body>
 </html>
