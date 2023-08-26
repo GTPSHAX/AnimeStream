@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Foldit', cursive;
+    font-family: 'Kalam', cursive;
+    font-family: 'Lunasima', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.head {
+    background-color: rgb(10, 10, 10);
+    padding: 10px;
+    padding-bottom: 0;
+    user-select: none;
+}
+.head .logo {
+    display: flex;
+    color: white;
+}
+.head .logo-bawah {
+    background-color: white;
+    width: 265px;
+    padding: 3px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.garis {
+    background: linear-gradient(45deg,rgb(255, 255, 255),rgb(116, 117, 116));
+    height: 5px;
+    border-radius: 0 10px;
+}
+
+body {
+    background: linear-gradient(rgb(0, 0, 0),rgb(61, 61, 61));
+    height: 100vh;
+    user-select: none;
+}
+
+.nav nav {
+    display: flex;
+}
+.nav a {
+    text-align: center;
+    width: fit-content;
+    margin: 10px;
+    width: 100vw;
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(rgb(255, 255, 255),rgb(172, 172, 172));
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+    clear: both;
+}
+.nav a:hover {
+    background: linear-gradient(0deg,rgb(255, 255, 255),rgb(172, 172, 172));
+}
+
+@media screen and (max-width: 395px) {
+    .nav a {
+        font-size: 10px;
+    }
+}
+
+.top-anime {
+    color: white;
+    margin: 5px;
+    overflow-x: scroll;
+}
+
+@media screen and (max-width: 1000px) {
+    #scrool::-webkit-scrollbar {
+        display: none;
+    }
+    #scrool::-webkit-scrollbar-thumb {
+        display: none;
+    }
+}
+
+.top-anime .anime-list {
+    display: flex;
+}
+.top-anime .anime-list a {
+    text-decoration: none;
+    color: white;
+}
+.top-anime .anime-list a .anime {
+    margin-bottom: 5px;
+    width: 100px;
+}
+.top-anime .anime-list a .anime img {
+    width: 100px;
+    height: 120px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.top-anime .anime-list a .anime h5 {
+    text-align: center;
+    font-size: 13px;
+}
+.top-anime .anime-list a .anime p {
+    font-size: 10px;
+    text-align: center;
+}
+
+#scrool {
+    cursor: grab;
+}
+#scrool:active {
+    cursor: grabbing;
+}
+#scrool::-webkit-scrollbar {
+    height: 10px;
+}
+#scrool::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, rgb(255, 255, 255),rgb(146, 146, 146));
+    border-radius: 5px;
+}
