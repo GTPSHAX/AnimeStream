@@ -123,12 +123,14 @@ body::-webkit-scrollbar-thumb {
     display: inline;
 }
 
+
 .eps {
     color: white;
     padding: 2px;
     text-align: center;
     width: 100%-2px;
     background: linear-gradient(rgb(54, 159, 245),rgb(23, 113, 231));
+    backdrop-filter: blur(4px);
 }
 .eps .eps-head {
     border: 1px solid rgba(255,255,255, 0.25);
@@ -155,6 +157,7 @@ body::-webkit-scrollbar-thumb {
     color: rgb(0, 0, 0);
     width: fit-content;
     text-decoration: none;
+    font-size: 20px;
     border: 1px solid rgba(255,255,255, 0.25);
     background-color: rgba(255,255,255, 0.45);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);

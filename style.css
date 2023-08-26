@@ -85,13 +85,19 @@ body {
 .top-anime .anime-list a {
     text-decoration: none;
     color: white;
+    padding: 5px;
 }
 .top-anime .anime-list a .anime {
     margin-bottom: 5px;
     width: 100px;
+    transition: .5s;
+    border-radius: 5px;
+}
+.top-anime .anime-list a .anime:hover {
+    box-shadow: 0 0 5px white;
 }
 .top-anime .anime-list a .anime img {
-    width: 100px;
+    width: 90px;
     height: 120px;
     margin: 5px;
     border-radius: 5px;
