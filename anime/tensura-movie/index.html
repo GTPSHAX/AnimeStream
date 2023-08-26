@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="videoplay">
-            <video controls playsinline id="video"><source type="video/mp4"/></video>
+            <video controls playsinline id="video"><source src="ttps://pixeldrain.com/api/file/qAu5Zc" type="video/mp4"/></video>
             <div class="resolusi">
                 <button id="360">360p</button>
                 <button id="480">480p</button>
@@ -62,39 +62,45 @@
     </main>
     <script>
         const resolutions = {
-            "360": "WkL9r7th",
-            "480": "z67z17GL",
+            "360": "feBFn7FP",
+            "480": "5jTyGg4m",
             "720": "9EqAu5Zc",
-            "1080": "xX57yNo3"
-        };
+            "1080": "TUzyMzrn"
+        }
     
-        const link = "https://pixeldrain.com/api/file/";
-        const normal = "background-color: rgba(225, 225, 225, 0.5); color: white;";
-        const aktif = "background-color: antiquewhite; color: #000000;";
-        const video = document.getElementById("video");
+        const link = "https://pixeldrain.com/api/file/"
+        const normal = "background-color: rgba(225, 225, 225, 0.5); color: white;"
+        const aktif = "background-color: antiquewhite; color: #000000;"
+        const video = document.getElementById("video")
     
         document.addEventListener("DOMContentLoaded", function() {
-            const resButtons = document.querySelectorAll(".resolusi button");
+            const resButtons = document.querySelectorAll(".resolusi button")
     
             function resolusi(res) {
-                video.src = link + res;
-                video.load();
+                video.src = link + res
+                video.load()
             }
     
             resButtons.forEach(button => {
                 button.addEventListener("click", function() {
-                    const res = resolutions[button.id];
-                    resolusi(res);
+                    const res = resolutions[button.id]
+                    resolusi(res)
                     resButtons.forEach(btn => {
                         if (btn.id === button.id) {
-                            btn.style = aktif;
+                            btn.style = aktif
                         } else {
-                            btn.style = normal;
+                            btn.style = normal
                         }
-                    });
-                });
-            });
-        });
+                    })
+                })
+            })
+            
+            const defaultRes = "720";
+            resolusi(resolutions[defaultRes]);
+            resButtons.forEach(button => {
+                button.style = button.id === defaultRes ? aktif : normal;
+            })
+        })
     </script>
 </body>
 </html>
