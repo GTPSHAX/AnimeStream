@@ -40,7 +40,7 @@
 }
 
 body {
-    background: linear-gradient(rgb(0, 0, 0),rgb(61, 61, 61));
+    background: linear-gradient(rgb(0, 0, 0),rgb(0,0,0));
     user-select: none;
 }
 body::-webkit-scrollbar {
@@ -207,4 +207,21 @@ body::-webkit-scrollbar-thumb {
 .resolusi button:active {
     background-color: antiquewhite;
     color: #000000;
+}
+
+.quots {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+.quots .text {
+    border-radius: 10px 0;
+    background-color: rgba(225, 225, 225, 0.5);
+    border: 1px solid white;
+    width: fit-content;
+    padding: 5px;
+}
+.quots .text p {
+    font-style: italic;
+    color: white;
 }
