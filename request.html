@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Anime</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="logo">
+                <h1>AnimeStream</h1><h1>.site</h1>
+            </div>
+            <div class="logo-bawah">
+                <h2>Situs Nonton Anime Gratis
+                </h2>
+            </div>
+        </div>
+        <div class="garis" style="margin-left: 10px; border-radius: 0 0 0 5px; margin-right: 10px;"></div>
+    </header>
+    <main>
+        <h1>Request Anime Movie</h1><br><br>
+    <form action="https://wa.me/6283865662983" id="waForm" method="get">
+        <label for="pesan">Judul Anime:</label><br>
+        <textarea style="padding: 5px;" name="text" id="pesan" cols="40" rows="4"></textarea><br>
+        <input type="submit" value="Kirim">
+    </form>
+    </main>
+    <style>
+        main {
+            color: white;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        document.getElementById("waForm").addEventListener("submit", function(event) {
+            var pesan = document.getElementById("pesan").value 
+            if (pesan.trim() === "") {
+                alert("Mohon isi pesan terlebih dahulu!")
+                event.preventDefault()
+            } else {
+                var waLink = "https://wa.me/6283865662983?text="+encodeURIComponent(pesan.replace(/\s/g, "+"))
+                this.action = waLink
+            }
+        })
+    </script>
+</body>
+</html>
