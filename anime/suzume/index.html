@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeStream</title>
+    <link rel="icon" href="../assets/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Foldit:wght@100;300;400;500;700&family=Kalam:wght@400;700&family=Lunasima:wght@400;700&family=Rubik:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="logo">
+                <h1>AnimeStream</h1><h1>.site</h1>
+            </div>
+            <div class="logo-bawah">
+                <h2>Situs Nonton Anime Gratis
+                </h2>
+            </div>
+        </div>
+        <div class="garis" style="margin-left: 10px; border-radius: 0 0 0 5px; margin-right: 10px;"></div>
+    </header>
+    <main>
+        <div class="main-head">
+            <div class="nav">
+                <nav>
+                    <a href="https://t.me/AnimeStreamPub">FeedBack</a>
+                    <div class="animation start-home"></div>
+                </nav>
+            </div>
+        </div>
+        <div class="desk-anime">
+            <div class="kotak-desk">
+                <img src="../assets/suzume.jpg">
+                <div class="desk">
+                    <h3>Suzume no Tojimari</h3>
+                    <p>Ketika langit berubah menjadi merah dan bumi bergetar, Jepang berada di ambang bencana. Namun, seorang remaja yang bertekad bernama Suzume menetapkan misi untuk menyelamatkan negaranya. Mampu melihat kekuatan supernatural yang tidak bisa dilihat orang lain, dia harus menutup pintu misterius yang menyebarkan kekacauan di seluruh negeri. Sebuah perjalanan berbahaya menanti saat nasib Jepang berada di pundaknya.</p>
+                    <div class="info">
+                        <p style="font-weight: bold;">Anime Information</p>
+                        <div class="garis2" style="height: 2px;"></div>
+                        <p style="font-weight: bold;">Status: <p>Selesai</p></p>
+                        <div class="garis2"></div>
+                        <p style="font-weight: bold;">Episode: <p>1</p></p>
+                        <div class="garis2"></div>
+                        <p style="font-weight: bold;">Genre: <p>Adventure, Fantasy</p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="videoplay">
+            <video controls playsinline id="video"><source src="ttps://pixeldrain.com/api/file/qAu5Zc" type="video/mp4"/></video>
+            <div class="resolusi">
+                <button id="360">360p</button>
+                <button id="480">480p</button>
+                <button id="720">720p</button>
+                <button id="1080">1080p</button>
+            </div>
+        </div>
+        <div class="quots">
+            <div class="text">
+                <p>"BELUM KEPIKIRAN"</p>
+                <h5 style="text-align: end; color: white;">- AnimeStream</h5>
+            </div>
+        </div>
+    </main>
+    <script>
+        const resolutions = {
+            "360": "3ofkjSiQ",
+            "480": "rwWqqktW",
+            "720": "hd8QXhi1",
+            "1080": "rfsQWm1M"
+        }
+    
+        const link = "https://pixeldrain.com/api/file/"
+        const normal = "background-color: rgba(225, 225, 225, 0.5); color: white;"
+        const aktif = "background-color: antiquewhite; color: #000000;"
+        const video = document.getElementById("video")
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            const resButtons = document.querySelectorAll(".resolusi button")
+    
+            function resolusi(res) {
+                video.src = link + res
+                video.load()
+            }
+    
+            resButtons.forEach(button => {
+                button.addEventListener("click", function() {
+                    const res = resolutions[button.id]
+                    resolusi(res)
+                    resButtons.forEach(btn => {
+                        if (btn.id === button.id) {
+                            btn.style = aktif
+                        } else {
+                            btn.style = normal
+                        }
+                    })
+                })
+            })
+            
+            const defaultRes = "720";
+            resolusi(resolutions[defaultRes]);
+            resButtons.forEach(button => {
+                button.style = button.id === defaultRes ? aktif : normal;
+            })
+        })
+    </script>
+</body>
+</html>

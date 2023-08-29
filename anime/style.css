@@ -79,6 +79,9 @@ body::-webkit-scrollbar-thumb {
     .nav a {
         font-size: 10px;
     }
+    .desk-anime .kotak-desk .desk p {
+        font-size: 10px;
+    }
 }
 
 .desk-anime {
