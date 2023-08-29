@@ -93,7 +93,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     color: white;
     padding: 5px;
-    background: linear-gradient(1deg,rgb(54, 159, 245),#0f0f0f);
+    background: linear-gradient(1deg,rgb(54, 159, 245),#000000);
 }
 .desk-anime .kotak-desk .desk {
     flex-direction: column;

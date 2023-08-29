@@ -90,6 +90,7 @@ body {
 .top-anime .anime-list a .anime {
     margin-bottom: 5px;
     width: 100px;
+    height: 100%;
     transition: .5s;
     border-radius: 5px;
 }
@@ -107,8 +108,15 @@ body {
     font-size: 13px;
 }
 .top-anime .anime-list a .anime p {
+    position: absolute;
+    margin-left: 10px;
+    font-weight: bold;
     font-size: 10px;
-    text-align: center;
+    background-color: rebeccapurple;
+    padding: 3px;
+    border-radius: 5px;
+    margin-top: -30px;
+    border: 1px solid white;
 }
 
 #scrool {
