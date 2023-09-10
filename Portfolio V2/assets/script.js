@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const starContainer1 = document.querySelector(".bintangs1");
     const starContainer2 = document.querySelector(".bintangs2");
-    const numberOfStars = 200; // Ganti dengan jumlah bintang yang Anda inginkan
+    const numberOfStars = 9999999; // Ganti dengan jumlah bintang yang Anda inginkan
 
     for (let i = 1; i <= numberOfStars; i++) {
         const star1 = document.createElement("div");
