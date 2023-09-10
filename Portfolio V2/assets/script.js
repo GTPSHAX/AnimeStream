@@ -19,5 +19,6 @@ function tes() {
         starContainer2.appendChild(star2);
     }
 }
+    tes()
     setInterval(tes, 10000);
 });
